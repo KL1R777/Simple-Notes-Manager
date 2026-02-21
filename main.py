@@ -26,8 +26,7 @@ def read_files(file):
         print(question)
 
         if question.upper() == "Y":
-            with open(file, 'x') as f:
-                print(f"Файл {file} успешно создан")
+            create_file(file)
         else:
             pass
 
@@ -38,7 +37,7 @@ def append_notes(file):
         with open(file, 'a') as f:
             f.write(f'\n{note}')
             
-            print(f.read())
+           
 
             print(f"Заметка успешно добавлено в файл")
     except FileNotFoundError:
